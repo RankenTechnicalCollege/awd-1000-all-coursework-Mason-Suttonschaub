@@ -1,0 +1,56 @@
+/* CSS Reset */
+body, header, nav, main, footer, h1, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  color: #FF69B4;
+}
+
+
+/* Styling for Navigation */
+nav {
+  background-color: #000;
+}
+
+nav ul {
+     margin: 0;
+} 
+
+nav li {
+    display: inline-block;
+    font-size: 1.5em; 
+}
+
+nav li a { 
+    color: #fff; 
+    padding: 0.5em 1.3em; 
+    text-decoration: none;
+    text-align: center;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+nav a:hover {
+  color: red;
+}
+
+/* Styling for small screens */
+
+
+/* Styling for Main */
+img{
+  max-width: 100%;
+  height: auto;
+}
