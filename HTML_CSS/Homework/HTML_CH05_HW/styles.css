@@ -12,6 +12,7 @@ body {
   font-style: normal;
   background-color: black;
   color: #FF69B4;
+  text-align: center;
 }
 
 
@@ -21,11 +22,12 @@ nav {
 }
 
 nav ul {
-     margin: 0;
+     margin: 1em auto;
+     padding: 1em;
 } 
 
 nav li {
-    display: inline-block;
+    display:inline-block;
     font-size: 1.5em; 
 }
 
@@ -33,7 +35,6 @@ nav li a {
     color: #fff; 
     padding: 0.5em 1.3em; 
     text-decoration: none;
-    text-align: center;
 }
 
 .sticky {
@@ -46,11 +47,45 @@ nav a:hover {
   color: red;
 }
 
-/* Styling for small screens */
+/* Styling for Main Content, Header, and Footer*/
+header {
+  font-size: 30px;
+}
 
+main {
+  font-size: 20px;
+}
 
-/* Styling for Main */
 img{
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
+  border-radius: 7em;
+}
+
+footer {
+  margin-top: 15em;
+}
+
+/* Styling for small screens */
+@media screen and (max-width: 768px) {
+  nav li{
+    display:block;
+  }
+
+  header {
+    font-size: 24px;
+  }
+
+  main {
+    font-size: 16px;
+  }
+
+  img{
+    max-width: 90%;
+    border-radius: 10em;
+  }
+
+  footer{
+    margin-top: 10em;
+  }
 }
