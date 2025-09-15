@@ -1,7 +1,7 @@
 /*
-    Student Name
-	File Name: 
-	Current Date: 
+    Student Name: Mason_Sutton-Schaub
+	File Name: styles06.css
+	Current Date: 9/15/2025
 */
 
 /* CSS reset */
@@ -13,7 +13,7 @@ body, header, nav, main, footer, img, h1, h3, ul {
 
 /* Style rule for body and images */
 body {
-    background-color: #e5e0fa;
+    background: linear-gradient(#e6e0fa, #29157e);
 }
 
 img {
@@ -77,8 +77,13 @@ footer {
 }
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 481px), print {
+@media screen and (min-width: 488px), print {
     
+    /* Style rule for tablet-desktop class */
+    .tablet-desktop {
+        display: block;
+    }
+
     /* Tablet Viewport: Style rules for nav area */
     nav li {
         display: inline-block;
@@ -93,8 +98,18 @@ footer {
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 769px), print {
- 
+
+    /* Desktop Viewport: Style Rule for header element */
+    header {
+        width: 25%;
+        float: left;
+    }
+
     /* Desktop Viewport: Style rules for nav */
+    nav ul {
+        text-align: right;
+    }
+
     nav li {
         border-radius: 0;
     }
@@ -104,6 +119,11 @@ footer {
         padding: 0.7em;
     }
 
+    nav li a:hover {
+        color: #4424d6;
+        background-color: #e5e0fa;
+    }
+
     /* Desktop Viewport: Style rules for the main content */
     main {
         border-style: none;
@@ -111,9 +131,22 @@ footer {
         overflow: auto;
     }
 
+    .col-content {
+        width: 30%;
+        float: left;
+        padding: 1.5%;
+    }
+
     /* Desktop Viewport: Style rule for footer */
     footer {
         clear: left;
     }
 
+}
+/* Media Query for Large Desktop Viewport */
+@media screen and (min-width: 1441px) {
+    #container {
+        width: 1440px;
+        margin: 0, auto;
+    }
 }
