@@ -1,0 +1,55 @@
+body, header, nav, main, footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F4f4f4;
+}
+
+/* Header Styles */
+header {
+  background-color: #000;
+  color: #ff69b4;
+  padding: 2em auto;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main Content Styling */
+#hero {
+  margin: auto auto;
+}
+
+section a {
+  float: left;
+}
+
+#menu-previewing {
+  clear: both;
+}
+
+/* Menu Styling */
+.menu-item {
+  border: 2em;
+  padding: 1em;
+  margin: 1em;
+}
+
+  section p span {
+    color: Blue;
+    font-weight: bold;
+  }
+
+  /* Footer Styling */
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
