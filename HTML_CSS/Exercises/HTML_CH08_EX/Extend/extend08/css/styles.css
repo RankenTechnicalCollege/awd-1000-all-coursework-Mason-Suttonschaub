@@ -1,0 +1,55 @@
+/*
+Name: Mason_Sutton-Schaub
+9/19/2025
+*/
+
+body, main, table, caption, footer, tr, th, td, thead, tbody {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+body {
+  background-color: #ffe5dc;
+  font-family: sans-serif;
+}
+
+.huh {
+  color: white;
+  border: 2px solid white;
+  background-color: #a22c02;
+}
+
+table {
+  border: 5px solid #fd5d0c;
+  margin: 0 auto;
+  box-shadow: 8px 8px 15px #792101;
+}
+
+table, tr, th, td {
+	border-collapse: collapse;
+	padding: 2%;
+}
+
+td {
+  border: 2px solid #a22c02;
+}
+
+th {
+  text-align: center;
+}
+
+.odd {
+  background-color: #fe9772;
+}
+
+caption {
+  color:#a22c02;
+  font-size: 24px;
+  padding: 2%;
+}
+
