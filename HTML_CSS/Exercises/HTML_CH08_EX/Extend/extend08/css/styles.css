@@ -31,7 +31,7 @@ table, tr, th, td {
 }
 
 td {
-  border: 2px solid #a22c02;
+  border: 1px solid #a22c02;
 }
 
 th {
@@ -44,13 +44,16 @@ th {
 
 caption {
   color:#a22c02;
-  font-size: 24px;
-  padding: 2%;
+  font-size: 30px;
+  padding: 3%;
   font-weight: bold;
 }
 
-.huh {
+.header {
   color: #ffffff;
-  border: 2px solid white;
   background-color: #a22c02;
+}
+
+thead tr th {
+border: 1px solid white;
 }

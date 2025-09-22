@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<!-- Student's Name, Today's Date -->
+<!-- Mason_Sutton-Schaub, 9/22/2025 -->
 <html lang="en">
 <head>
 	<title>Form Example</title>
 	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles08.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -13,16 +14,39 @@
         <!-- Use the main area to add the main content of the webpage -->
         <main>
 
-<form class="grid"><input type="text" name="fName" id="fName"><input type="text" name="lName" id="lName"><input type="email" name="email" id="email"><input type="tel" name="phone" id="phone"><input type="text" name="cName" id="cName"><input type="number" name="cNum" id="cNum"><input type="text" name="expDate" id="expDate" placeholder="MM/YY"><input type="number" name="ccv" id="ccv"></form>
+            <form class="grid">
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <input type="text" name="fName" id="fName">
+                    <label for="fName">First Name:</label>
+                    <input type="text" name="lName" id="lName">
+                    <label for="lName">Last Name:</label>
+                    <input type="email" name="email" id="email">
+                    <label for="email">Email Address:</label>
+                    <input type="tel" name="phone" id="phone">
+                    <label for="phone">Phone Number:</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Payment Information</legend>
+                    <input type="text" name="cName" id="cName">
+                    <label for="cName">Card Name:</label>
+                    <input type="number" name="cNum" id="cNum">
+                    <label for="cNum">Card Number:</label>
+                    <input type="text" name="expDate" id="expDate" placeholder="MM/YY">
+                    <label for="expDate">Expiration Date:</label>
+                    <input type="number" name="ccv" id="ccv">
+                    <label for="ccv">CCV:</label>
+                </fieldset>
+                <button type="submit" id="submit" value="submit" class="btn">Submit</button>
+            </form>
 
-</main>
+        </main>
 
 <!-- Use the footer area to add webpage footer content -->
 <footer>
-    <p>Student's Name, Today's Date</p>
+    <p>Mason_Sutton-Schaub, 9/22/2025</p>
 </footer>
 
 	</div>
-	
 </body>
 </html>
