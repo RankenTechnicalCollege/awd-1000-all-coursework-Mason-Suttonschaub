@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Name: Mason_Sutton-Schaub
+Date: 10/1/2025
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+
+          <!-- Use the main area to add the main content of the webpage -->
+          <main>
+
+              <form id="order-form" action="/order" method="post">
+                  <fieldset>
+                      <legend>Customer Information</legend>
+                      <label for="fName" class="form-label">First Name:</label>
+                      <input type="text" name="fName" id="fName" class="form-control" required>
+                      <label for="lName" class="form-label">Last Name:</label>
+                      <input type="text" name="lName" id="lName" class="form-control" required>
+                      <label for="phone" class="form-label">Phone Number:</label>
+                      <input type="tel" name="phone" id="phone" class="form-control" required>
+                      <label for="email" class="form-label">Email Address:</label>
+                      <input type="email" name="email" id="email" class="form-control" required>
+                      <label for="C-email" class="form-label">Confirm Email:</label>
+                      <input type="email" name="C-email" id="C-email" class="form-control" required>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Account Credentials</legend>
+                    <label for="pass" class="form-label">Password:</label>
+                    <input type="password" name="pass" id="pass" class="form-control" required>
+                    <label for="C-pass" class="form-label">Confirm Password:</label>
+                    <input type="password" name="C-pass" id="C-pass" class="form-control" required>
+                  </fieldset>
+                  <fieldset>
+                      <legend>Payment Information</legend>
+                      <label for="cNum" class="form-label">Card Number:</label>
+                      <input type="number" name="cNum" id="cNum" class="form-control" required>
+                      <label for="expDate" class="form-label">Expiration Date:</label>
+                      <input type="text" name="expDate" id="expDate" placeholder="MM/YY" class="form-control" required>
+                      <label for="csc" class="form-label">CSC:</label>
+                      <input type="number" name="csc" id="csc" class="form-control" required>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Billing Address</legend>
+                    <label for="st-add" class="form-label">Street Address:</label>
+                    <input type="text" name="st-add" id="st-add" class="form-control" required>
+                    <label for="st-2add" class="form-label">Address Line 2:</label>
+                    <input type="text" name="st-2add" id="st-2add" class="form-control" required>
+                    <label for="city" class="form-label">City:</label>
+                    <input type="text" name="city" id="city" class="form-control" required>
+                    <select name="state" id="state" class="form-select" required>
+                      <option value="" hidden></option>
+                      <option value="MO">MO</option>
+                      <option value="IL">IL</option>
+                    </select>
+                    <label for="zip" class="form-label">Zip Code:</label>
+                    <input type="number" name="zip" id="zip" class="form-control" required>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Shipping Address</legend>
+                    <input type="checkbox" name="same" id="same" class="form-control" required>
+                    <label for="same" class="form-label">Same as billing address?</label>
+                    <label for="st-addy" class="form-label">Street Address:</label>
+                    <input type="text" name="st-addy" id="st-addy" class="form-control" required>
+                    <label for="st-2addy" class="form-label">Address Line 2:</label>
+                    <input type="text" name="st-2addy" id="st-2addy" class="form-control" required>
+                    <label for="city2" class="form-label">City:</label>
+                    <input type="text" name="city2" id="city2" class="form-control" required>
+                    <select name="state2" id="state2" class="form=select" required>
+                      <option value="" hidden></option>
+                      <option value="MO">MO</option>
+                      <option value="IL">IL</option>
+                    </select>
+                    <label for="zip2" class="form-label">Zip Code:</label>
+                    <input type="number" name="zip2" id="zip2" class="form-control" required>
+                  </fieldset>
+                  <button type="submit" id="submit" value="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+          </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
