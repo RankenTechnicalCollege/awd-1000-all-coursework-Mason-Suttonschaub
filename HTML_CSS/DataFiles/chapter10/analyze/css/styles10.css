@@ -1,6 +1,6 @@
 /*
-    Author:
-    Date:
+    Author:Mason_Sutton-Schaub
+    Date: 10/15/2025
     File Name: styles.css
 */
 
@@ -54,6 +54,18 @@ main {
 	border-radius: 6px;
 	background-color: #fff;
 	border: inset 0.2em #7a6d68; 
+}
+
+figure {
+	margin: 0 auto;
+}
+
+img {
+	padding: 1em;
+}
+
+#placeholder {
+	display: none;
 }
 
 footer {
