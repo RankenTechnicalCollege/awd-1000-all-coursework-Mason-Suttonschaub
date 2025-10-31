@@ -11,11 +11,11 @@
 
 function FahrenheitToCelsius(degree){
       (degree-32) / 1.8;
-      return degree;
+      return;
 }
 
 function CelsiusToFahrenheit(degree){
       1.8 * degree + 32;
-      return degree;
+      return;
 }
 
