@@ -103,7 +103,7 @@ table#calculator input {
    -webkit-border-radius: 7px;
    border-radius: 7px;
    width: 100%;
-   height: 100%;
+   height: 35px; /* CHANGED TO FIT PROPERLY */
 }
 table#calculator textarea {
    width: 100%;
