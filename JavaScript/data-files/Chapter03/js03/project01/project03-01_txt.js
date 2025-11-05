@@ -8,17 +8,17 @@
 
       Filename: project03-01.js
 */
-let menuItems = [document.getElementsByClassName("menuItem")];
+let menuItems = document.getElementsByClassName("menuItem");
 
 for (i = 0; i < menuItems.length; i++) {
-      menuItems[i].addeventlistener("click", calcTotal)
+      menuItems[i].addEventListener("click", calcTotal);
 }
+let orderTotal = 0;
 
 function calcTotal(){
-      let orderTotal = 0;
       for (i = 0; i < menuItems.length; i++){
-            if (i.checked()) {
-                  orderTotal += number(menuItems[i])
+            if (menuItems[i].checked) {
+            orderTotal += Number(menuItems[i].value);
             }
       }
       document.getElementById("billTotal").innerHTML = formatCurrency(orderTotal);

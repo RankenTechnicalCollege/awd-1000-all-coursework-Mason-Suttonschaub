@@ -76,7 +76,7 @@ document.getElementById("buttonEnter").onclick = function() {
 }
 
 // Clear the calculator window if the C key is clicked
-document.getElementById("buttonClear").onclick = clearCalculator();
+document.getElementById("buttonClear").onclick = clearCalculator;
 
 
 
