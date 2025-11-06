@@ -62,10 +62,11 @@ let htmlCode = "";
 
 for (i = 0; i < titles.length; i++){
       htmlCode += `<tr>
-                  <td><a href='links[`+i+`]'>titles[`+i+`]</a><td>
-                  <td>summaries[`+i+`]</td>
-                  <td>ratings[`+i+`]</td>
+                  <td><a href='`+links[i]+`'>`+titles[i]+`</a></td>
+                  <td>`+summaries[i]+`</td>
+                  <td>`+ratings[i]+`</td>
                   </tr>`
 }
 
-let tableBody = document.getElementsByTagName("tbody");
+let tableBody = document.getElementsByTagName("tbody")[0];
+tableBody.innerHTML = htmlCode;
