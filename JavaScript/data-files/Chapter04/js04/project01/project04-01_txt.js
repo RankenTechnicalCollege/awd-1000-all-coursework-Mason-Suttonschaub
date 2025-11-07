@@ -3,15 +3,15 @@
       Project 04-01
 
       Application to calculate total moving cost
-      Author: 
-      Date:   
+      Author: Mason_Sutton-Schaub
+      Date:   11/7/2025
 
       Filename: project04-01.js
 */
 
 // Global Constants
-const COST_PER_LB = 50;
-const COST_PER_MILE = 75;
+const COST_PER_LB = 0.50;
+const COST_PER_MILE = 0.75;
 const SETUP_COST = 500;
 
 // Global Variables
@@ -38,7 +38,7 @@ function calcTotal() {
   
    
    if (document.getElementById("setupBox").checked) {
-      totalCost += SETUP_COST
+      totalCost += SETUP_COST;
    }
    
    // Display the moving cost estimate in the totalBox, formatted as currency

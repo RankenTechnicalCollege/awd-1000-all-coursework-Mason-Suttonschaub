@@ -25,15 +25,15 @@ let reviewTitles = ["My Favorite Workout Game", "Poor Choreography", "Buggy with
 function starImages(rating){
 let imageText = "";
 
-for (i = 1; i <= rating; i++){
-      imageText = `<img src = 'star.png' alt = ">`;
+for (let i = 1; i <= rating; i++){
+      imageText += `<img src = 'star.png' alt = "star">`;
 }
 
 return imageText;
 }
 
 //generates the HTML code for a table that contains the review from each customer
-for (i = 0; i < reviewers.length; i++){
+for (let i = 0; i < reviewers.length; i++){
       let reviewCode = "";
       if (reviewType[i] === 'P'){
             reviewCode += `<table class = 'prime'>`;
