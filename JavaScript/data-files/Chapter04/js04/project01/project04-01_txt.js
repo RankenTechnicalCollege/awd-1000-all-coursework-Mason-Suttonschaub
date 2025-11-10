@@ -30,12 +30,21 @@ function calcTotal() {
    let totalCost = 0;      // Set the initial estimate to $0
    msgBox.innerHTML = "";  // Erase any warnings in the message box
    
-
-      totalCost += wgtBox.value * COST_PER_LB;      
-
-
-      totalCost += distBox.value * COST_PER_MILE;   
-  
+   try {
+      if (!(wgtBox.value > 0))throw "!! Enter a positive weight" 
+      if (!(wgtBox.value < 0)) totalCost += wgtBox.value * COST_PER_LB;
+   }
+   catch(err) {
+      msgBox.innerHTML = err;
+   }
+            
+   try {
+      if (!(distBox.value > 0))throw "!! Enter a positive mileage" 
+      if (!(distBox.value < 0)) totalCost += distBox.value * COST_PER_MILE; 
+   }
+   catch(err) {
+      msgBox.innerHTML = err;
+   }
    
    if (document.getElementById("setupBox").checked) {
       totalCost += SETUP_COST;
