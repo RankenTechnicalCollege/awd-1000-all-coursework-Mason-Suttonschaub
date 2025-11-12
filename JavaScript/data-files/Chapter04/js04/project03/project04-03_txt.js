@@ -10,7 +10,7 @@
 */
 "use strict";
 // Maximum Length of Review
-const MAX_REVIEW = 100;
+const MAX_REVIEW = 1000;
 document.getElementById("limit").innerHTML = MAX_REVIEW;
 
 // Reference to elemets in the web page
@@ -30,11 +30,11 @@ function updateCount() {
    let commentText = document.getElementById("comment").value;
    let charCount = countCharacters(commentText);
    try {
-      if (charCount < MAX_REVIEW) throw "You have exceeded the character count limit";
+      if (charCount > MAX_REVIEW) throw "You have exceeded the character count limit";
    } catch(err) {
-      document.getElementById('warningBox').innerHTML = err;
+      warningBox.innerHTML = err;
    } finally {
-      document.getElementById(wordCountBox).innerHTML = charCount;
+      wordCountBox.innerHTML = charCount;
    }
 }
 

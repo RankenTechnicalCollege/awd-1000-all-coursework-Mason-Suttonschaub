@@ -3,20 +3,20 @@
       Project 04-04
 
       Application to determine change from a cash amount
-      Author: 
-      Date:   
+      Author: Mason_Sutton-Schaub
+      Date:   11/12/2025
 
       Filename: project04-04.js
 */
-
+"use strict";
 // Global variables
-let cashBox = document.getElementById(cash);
-let billBox = document.getElementById(bill);
-let changeBox = document.getElementById(change);
+let cashBox = document.getElementById('cash');
+let billBox = document.getElementById('bill');
+let changeBox = document.getElementById('change');
 
 // Event handlers to be run when the cash or bill value changes
-cashBox.addEventListener("change", runRegister);
-billBox.addEventListener("change", runRegister);
+cashBox.addEventListener("change", runTheRegister);
+billBox.addEventListener("change", runTheRegister);
 
 // Function to reset the values in the web page
 function zeroTheRegister() {
@@ -58,7 +58,7 @@ function calcChange(changeValue) {
    // Determine the number of $5 bills
    let bill5Amt = determineCoin(changeValue, 5);
    document.getElementById("bill5").innerHTML = bill5Amt;
-   changeValue -=  bill5Amt*3;  
+   changeValue -=  bill5Amt*5;  
    
    // Determine the number of $1 bills
    let bill1Amt = determineCoin(changeValue, 1);
