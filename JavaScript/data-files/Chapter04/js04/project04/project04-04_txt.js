@@ -10,14 +10,19 @@
 */
 "use strict";
 // Global variables
-let cashBox = document.getElementById('cash');
-let billBox = document.getElementById('bill');
-let changeBox = document.getElementById('change');
+let cashBox;
+let billBox;
+let changeBox;
+
+window.addEventListener("DOMContentLoaded", () => {
+cashBox = document.getElementById('cash');
+billBox = document.getElementById('bill');
+changeBox = document.getElementById('change');
 
 // Event handlers to be run when the cash or bill value changes
 cashBox.addEventListener("change", runTheRegister);
 billBox.addEventListener("change", runTheRegister);
-
+});
 // Function to reset the values in the web page
 function zeroTheRegister() {
    changeBox.value = 0;

@@ -4,8 +4,8 @@
       Project 05-01
 
       Project to present an online quiz with a countdown clock
-      Author: 
-      Date:   
+      Author: Mason_Sutton-Schaub
+      Date:   11/13/2025
 
       Filename: project05-01.js
 */
@@ -25,10 +25,18 @@ quizClock.value = quizTime;
 let timeLeft = quizTime;
 
 // Declare the ID for timed commands
+let timeID;
 // and the node list for questions
+let questionList =  document.querySelectorAll("div#quiz input");
 
+document.getElementById("startQuiz").addEventListener("onclick", ()=>{
+   document.getElementById("overlay").classList.add("showquiz");
+   timeID = setInterval(countDown(), 1000); 
+})
 
-
+function countDown(){
+   if ()
+}
 
 
 
