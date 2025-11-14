@@ -29,13 +29,28 @@ let timeID;
 // and the node list for questions
 let questionList =  document.querySelectorAll("div#quiz input");
 
-document.getElementById("startQuiz").addEventListener("onclick", ()=>{
+document.getElementById("startquiz").addEventListener("onclick", ()=>{
    document.getElementById("overlay").classList.add("showquiz");
    timeID = setInterval(countDown(), 1000); 
 })
 
 function countDown(){
-   if ()
+   if (timeLeft === 0){
+      clearInterval(timeID);
+      let totalCorrect;
+      totalCorrect = checkAnswers();
+      if (totalCorrect === correctAnswers.length){
+         window.alert("Congratulations on getting 100%");
+      } else {
+         window.alert(totalCorrect + "/" + correctAnswers.length);
+         timeLeft = quizTime;
+         quizClock.value = timeLeft;
+         document.getElementById("overlay").classList.replace("showquiz", "hidequiz");
+      }
+   } else {
+      timeLeft -= 1;
+      quickClock.value = timeLeft;
+   }
 }
 
 
