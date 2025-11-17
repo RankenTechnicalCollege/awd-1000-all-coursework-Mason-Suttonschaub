@@ -29,9 +29,9 @@ let timeID;
 // and the node list for questions
 let questionList =  document.querySelectorAll("div#quiz input");
 
-document.getElementById("startquiz").addEventListener("onclick", ()=>{
-   document.getElementById("overlay").classList.add("showquiz");
-   timeID = setInterval(countDown(), 1000); 
+   startQuiz.addEventListener("onclick", ()=>{
+   overlay.classList.add("showquiz");
+   timeID = setInterval(countDown, 1000); 
 })
 
 function countDown(){
@@ -45,10 +45,10 @@ function countDown(){
          window.alert(totalCorrect + "/" + correctAnswers.length);
          timeLeft = quizTime;
          quizClock.value = timeLeft;
-         document.getElementById("overlay").classList.replace("showquiz", "hidequiz");
+         overlay.classList.replace("showquiz", "hidequiz");
       }
    } else {
-      timeLeft -= 1;
+      timeLeft--;
       quickClock.value = timeLeft;
    }
 }
