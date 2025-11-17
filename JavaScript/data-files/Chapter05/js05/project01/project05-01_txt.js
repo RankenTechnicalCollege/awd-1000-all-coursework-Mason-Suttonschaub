@@ -29,7 +29,7 @@ let timeID;
 // and the node list for questions
 let questionList =  document.querySelectorAll("div#quiz input");
 
-   startQuiz.addEventListener("onclick", ()=>{
+   startQuiz.addEventListener("click", ()=>{
    overlay.classList.add("showquiz");
    timeID = setInterval(countDown, 1000); 
 })
@@ -49,7 +49,7 @@ function countDown(){
       }
    } else {
       timeLeft--;
-      quickClock.value = timeLeft;
+      quizClock.value = timeLeft;
    }
 }
 
