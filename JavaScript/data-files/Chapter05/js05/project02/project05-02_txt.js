@@ -12,4 +12,22 @@
 
 let images = document.getElementsByTagName("img");
 let photoBucket = document.getElementById("photo_bucket");
-let photoList = document.getElementsById("photo_list");
+let photoList = document.getElementById("photo_list");
+console.log("1");
+for (let i = 0; i < images.length; i++){
+      images[i].addEventListener("click", () => {
+            if(images[i].id === photo_bucket){
+                  let newItem = document.createElement("li");
+                  photoList.appendChild(newItem);
+                  newItem.appendChild(this);
+                  console.log("1");
+
+            } else {
+                  let oldItem = this.parentNode;
+                  photoBucket.append(this);
+                  oldItem.parentNode.remove(oldItem);
+                  console.log("1");
+
+            }
+      })
+}
