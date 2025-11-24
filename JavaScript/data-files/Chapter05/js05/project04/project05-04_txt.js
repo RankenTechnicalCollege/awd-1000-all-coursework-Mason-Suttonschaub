@@ -14,13 +14,23 @@
 let phrases = document.querySelectorAll("article blockquote dfn");
 
 for (let i = 0; i < phrases.length; i++){
-      phrases[i].addEventListener("onclick", function() {
+      phrases[i].addEventListener("click", function() {
             let phrase = document.createElement('h1');
             phrase.textContent = this.textContent;
             let footnote = document.createElement('p');
             footnote.textContent = footnotes[i];
             footnote.style = "font-style: italic; font-size: 1.2em;";
             let closeButton = document.createElement('input');
-            
+            closeButton.setAttribute("type", "button");
+            closeButton.setAttribute("value", "Close Footnote");
+            closeButton.style = "display: block; margin: 10px auto;";
+            let popup = window.open("", "footnote", "width=200,height=200,top=100,left=100");
+            popup.document.body.style = "background-color: ivory; font-size: 16px; padding: 10px;";
+            popup.document.body.appendChild(phrase);
+            popup.document.body.appendChild(footnote);
+            popup.document.body.appendChild(closeButton);
+            closeButton.addEventListener("click", function(){
+                  popup.close();
+            })
       })
 }
