@@ -15,7 +15,7 @@ window.onload = function(){
 let allSelect = document.querySelectorAll("form#govLinks select");
 
 for (let i = 0; i < allSelect.length; i++){
-      allSelect[i].addEventListener("onchange", function(evt){
+      allSelect[i].addEventListener("change", function(evt){
             let linkURL = evt.target.value;
             let newWin = window.open(linkURL);
       })
