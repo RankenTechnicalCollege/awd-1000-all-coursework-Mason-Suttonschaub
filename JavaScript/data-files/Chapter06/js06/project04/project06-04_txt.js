@@ -72,7 +72,7 @@ function filterSelect(selectList, category){
    let options = selectList.options;
    let optionsLength = options.length;
    for (let i = 0; i < optionsLength; i++){
-      if (options.className === category) {
+      if (options[i].className === category) {
          options[i].style.display = "block";
       } else {
          options[i].style.display = "none";
@@ -81,8 +81,8 @@ function filterSelect(selectList, category){
 }
 
 selectVehicle.addEventListener("click", function(){
-    let makeText = make.options[makeList.selectedIndex].text;
-    let modelText = model.options[modelList.selectedIndex].text;
-    let trimText = trim.options[trimList.selectedIndex].text;
-    vehicle.textContent = makeText + " " + modelText + " " + trimText;
+    let makeText = make.options[make.selectedIndex].text;
+    let modelText = model.options[model.selectedIndex].text;
+    let trimText = trim.options[trim.selectedIndex].text;
+    vehicle.innerHTML = makeText + " " + modelText + " " + trimText;
 })

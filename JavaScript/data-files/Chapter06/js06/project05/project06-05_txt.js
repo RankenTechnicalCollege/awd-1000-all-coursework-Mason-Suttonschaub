@@ -4,8 +4,8 @@
       Project 06-05
 
       Project to submit a registration form
-      Author: 
-      Date:   
+      Author: Mason_Sutton-Schaub
+      Date:   12/3/2025
 
       Filename: project06-05.js
 */
