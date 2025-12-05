@@ -4,8 +4,8 @@
       Project 07-02
 
       Project to deal cards from a shuffled poker deck
-      Author: 
-      Date:   
+      Author: Mason_Sutton-Schaub
+      Date:   12/5/2025
 
       Filename: project07-02.js
 */
@@ -28,7 +28,9 @@ let cardsLeft = document.getElementById("cardsLeft");
 let deck = [];
 
 document.getElementById("deal").onclick = function() {   
-   
+   function newDeck(){
+      
+   }
 
 }
 
