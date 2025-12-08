@@ -29,7 +29,10 @@ let deck = [];
 
 document.getElementById("deal").onclick = function() {   
    function newDeck(){
-      
+      deck = deckStr.split(",");
+      function shuffle(a, b){
+            return 0.5 - Math.random();
+      }
    }
 
 }
