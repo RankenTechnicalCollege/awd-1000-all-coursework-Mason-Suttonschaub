@@ -4,8 +4,9 @@
       Project 07-05
 
       Project to compare the distribution of word lengths between two authors
-      Author: 
-      Date:   
+      Author: Mason_Sutton-Schaub
+      Date:   12/10/2025
+
 
       Filename: project07-05.js
 */
@@ -38,7 +39,7 @@ document.getElementById("button2").onchange = function() {
 
 function generateWordFreq(inputFile, outputDoc, outputCount) {
    // Read the contents of the selected file
-   let fr = new Reader();
+   let fr = new fileReader();
    fr.read(inputFile); 
 
    // Once the file has finished loading, display the document in the page

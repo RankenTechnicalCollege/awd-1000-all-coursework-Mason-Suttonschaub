@@ -4,8 +4,8 @@
       Project 07-04
 
       Project to create a customer queue
-      Author: 
-      Date:   
+      Author: Mason_Sutton-Schaub
+      Date:   12/10/2025
 
       Filename: project07-04.js
 */
@@ -40,3 +40,34 @@ function generateCustomerList() {
    }
 }
 
+addButton.addEventListener("click", function() {
+   customers.push(customerName.value);
+   generateCustomerList();
+   status.textContent = customerName.value + " added to the end of queue";
+})
+
+searchButton.addEventListener("click", function() {
+   let place = customers.indexOf(customerName.value) + 1;
+   if (place === 0){
+      status.textContent = customerName.value + " is not found in the queue";
+   } else {
+      status.textContent = customerName.value + " found in position " + place + " of the queue";
+   }
+})
+
+removeButton.addEventListener("click", function() {
+   let index = customers.indexOf(customerName.value);
+   if (index != -1){
+      customers.splice(index, 1);
+      status.textContent = "customer removed from the queue";
+      generateCustomerList();
+   } else {
+      status.textContent = customerName.value + "is not found in the queue";
+   }
+})
+
+topButton.addEventListener("click", function() {
+   let topCustomer = customers.shift();
+   status.textContent = topCustomer + " from the queue";
+   generateCustomerList(); 
+})
