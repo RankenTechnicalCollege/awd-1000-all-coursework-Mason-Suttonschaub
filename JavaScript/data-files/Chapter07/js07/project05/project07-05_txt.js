@@ -47,10 +47,10 @@ function generateWordFreq(inputFile, outputDoc, outputCount) {
       outputDoc.innerHTML = fr.result;
       
       // Store the text content of the output document
-      let sourceText = outputDoc.innerHTML;
+      let sourceText = outputDoc.textContent;
       
       // Remove any character that is not alphabetic or whitespace
-      let alphaRegx = "/[^a-zA-Z\s]/g";
+      let alphaRegx = "/[^a-zA-Z]+/g";
       sourceText = sourceText.replace(alphaRegx, "");  
 
       // Split the text into an array at each occurence of one or more whitespace characters
