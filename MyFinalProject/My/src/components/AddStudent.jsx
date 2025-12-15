@@ -1,7 +1,8 @@
 import React, {useState} from "react"
 import {nanoid} from 'nanoid'
 import './AddStudent.css'
-
+import { FontAwesomeIcon } from '@fortAwesome/react-fontawesome';
+import { faCirclePlus, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function AddStudent (props){
   //id, firstName, lastName, email, photo
@@ -9,7 +10,7 @@ function AddStudent (props){
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [selectedFile, setSelectedFile] = useState();
-  const [gradYear, setGradYear] = useState();
+  const [gradYear, setGradYear] = useState('');
 
   const doWork = ()=> {
     const newStudent = {"id":nanoid(),
@@ -49,7 +50,7 @@ function AddStudent (props){
         <input type='text' id='textGradYear' placeholder='Graduation Year' className='form-control' onChange={(e) => setGradYear(e.currentTarget.value)} value={gradYear}/>
       </div>
         <div className='col-md-2'>
-          <button type="button" id='btnAdd' className='btn btn-success btn-lg' onClick={doWork}>Add Student</button>
+          <button type="button" id='btnAdd' className='btn btn-success btn-lg' onClick={doWork}>Add Student<FontAwesomeIcon icon={faCirclePlus}/></button>
       </div>
       </div>
   )

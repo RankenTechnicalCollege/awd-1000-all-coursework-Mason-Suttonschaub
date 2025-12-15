@@ -5,8 +5,8 @@ import './App.css'
 import AddStudent from './components/AddStudent'
 import Student from './components/Student'
 import _ from 'lodash'
-//import { FontAwesomeIcon } from '@fortAwesome/react-fontawesome';
-//import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
@@ -16,22 +16,41 @@ function App() {
   const [gradYear, setGradYear] = useState('');
 
   useEffect(() => {
+    if (localStorage) {
+      const studentsLocalStorage = JSON.parse(localStorage.getItem('students'));
+    
+    if(studentsLocalStorage){
+      saveStudents(studentsLocalStorage);
+    }else{
     saveStudents(students);
+    }
+  }
   }, []);
 
   const addStudent = (newStudent) => {
     const updatedStudents = [...allStudents, newStudent];
     setAllStudents(updatedStudents);
+    setSearchResults(updatedStudents);
   }
 
   const saveStudents = (students) => {
     setAllStudents(students);
     setSearchResults(students);
+    if(localStorage){
+      localStorage.setItem('students', JSON.stringify(students));
+      console.log("saved to local storage");
+    }
   }
 
   const removeStudent = (studentToDelete) => {
     const updatedStudentArray = allStudents.filter(student => student.id !== studentToDelete.id);
     saveStudents(updatedStudentArray);
+  }
+
+  const updateStudent = (updatedStudent) => {
+    //console.table(updatedStudent);
+    const updatedStudentArray = allStudents.map(student => student.id === updatedStudent.id ? {...student, ...updatedStudent} : student);
+    saveStudents(updatedStudentArray)
   }
 
   const searchStudents = () => {
@@ -140,7 +159,7 @@ const students=[{
         {searchResults && searchResults .map((student) =>
         (
           <div className='col-lg-2' key={student.id}>
-              <Student student={student} removeStudent={removeStudent}/>
+              <Student student={student} removeStudent={removeStudent} updateStudent={updateStudent} />
           </div>)
         )}
       </div>
@@ -161,7 +180,7 @@ const students=[{
           </select>
         </div>
         <div className='col-md-4'>
-          <button type='button' className='btn btn-primary btn-lg' onClick={searchStudents}>Search Students</button>
+          <button type='button' className='btn btn-primary btn-lg' onClick={searchStudents}>Search Students &nbsp;<FontAwesomeIcon icon={faSearch}/></button>
         </div>
       </div>
     </div>
